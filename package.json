@@ -3,6 +3,9 @@
   "version": "1.0.2",
   "description": "Tail a hyperpipe at a hypername",
   "main": "index.js",
+  "bin": {
+    "hypertail": "main"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -2,8 +2,9 @@
 Tail a hyperpipe at a hypername
 
 ## Usage
+
 ```txt
-  Usage: hypertail <topic> <key>
+  Usage: hypertail <topic> <key> [options]
 
   Example:
     $ hypername init startup.world <key>
@@ -11,6 +12,7 @@ Tail a hyperpipe at a hypername
     $ hypername list startup.world
     $ hypertail startup.world production.log
 ```
+All options are passed to `hyperpipe`.
 
 ## See Also
 - [hypername](https://github.com/mafintosh/hypername)

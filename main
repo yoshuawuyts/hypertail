@@ -12,8 +12,9 @@ if [ $? -ne 0 ]; then
   npm i -g 'hyperpipe' || exit 1
 fi
 
-if [ ! $# = 2 ]; then
+if [ $# -lt 2 ]; then
   printf 'Usage: hypertail <topic> <key>\n'
+  exit 1
 fi
 
 topic="$1"

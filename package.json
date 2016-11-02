@@ -1,6 +1,6 @@
 {
   "name": "hypertail",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Tail a hyperpipe at a hypername",
   "main": "index.js",
   "scripts": {

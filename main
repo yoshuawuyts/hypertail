@@ -3,7 +3,7 @@
 hypername -h > /dev/null
 if [ $? -ne 0 ]; then
   printf 'command %s not found. installing\n' 'hypername'
-  npm i -g 'hyperpipe' || exit 1
+  npm i -g 'hypername' || exit 1
 fi
 
 hyperpipe -h > /dev/null
@@ -21,5 +21,9 @@ topic_key="$2"
 shift 2
 
 key="$(hypername get "$topic" "$topic_key")"
+
+if [ $? -ne 0 ]; then
+  printf 'hypername get %s %s failed. Exiting\n' "$topic" "$topic_key"
+fi
 
 hyperpipe "/tmp/$topic/$topic_key.db" "$key" "$@"

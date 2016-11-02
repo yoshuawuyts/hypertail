@@ -1,0 +1,25 @@
+#!/bin/bash
+
+hypername -h > /dev/null
+if [ $? -ne 0 ]; then
+  printf 'command %s not found. installing\n' 'hypername'
+  npm i -g 'hyperpipe' || exit 1
+fi
+
+hyperpipe -h > /dev/null
+if [ $? -ne 0 ]; then
+  printf 'command %s not found. installing\n' 'hyperpipe'
+  npm i -g 'hyperpipe' || exit 1
+fi
+
+if [ ! $# = 2 ]; then
+  printf 'Usage: hypertail <topic> <key>\n'
+fi
+
+topic="$1"
+topic_key="$2"
+shift 2
+
+key="$(hypername get "$topic" "$topic_key")"
+
+hyperpipe "/tmp/$topic/$topic_key.db" "$key" "$@"

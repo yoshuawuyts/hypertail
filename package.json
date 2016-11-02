@@ -1,0 +1,16 @@
+{
+  "name": "hypertail",
+  "version": "1.0.0",
+  "description": "{{description}}",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Yoshua Wuyts <yoshuawuyts@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "hypername": "^2.2.0",
+    "hyperpipe": "^1.1.0"
+  }
+}

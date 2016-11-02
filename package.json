@@ -8,9 +8,5 @@
   },
   "keywords": [],
   "author": "Yoshua Wuyts <yoshuawuyts@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "hypername": "^2.2.0",
-    "hyperpipe": "^1.1.0"
-  }
+  "license": "MIT"
 }
